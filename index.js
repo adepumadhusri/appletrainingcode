@@ -1,14 +1,9 @@
 import React from "react";
+import Incrementer from "./incrementer/index";
 
-import Parent from "./parent";
+const App = () => (
+    <Incrementer/>
+   
+);
 
-class Incrementer extends React.Component{
-  render()
-  {
-      return(
-          <Parent/>
-      )
-  }
-}
-
-export default Incrementer
+export default App;
