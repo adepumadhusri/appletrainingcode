@@ -1,14 +1,27 @@
 import React from "react";
 
-import Parent from "./parent";
+import Thead from "./thead";
+import Tbody from "./tbody";
 
-class Incrementer extends React.Component{
-  render()
-  {
-      return(
-          <Parent/>
-      )
-  }
+class Table extends React.Component{
+    constructor(){
+        super();
+        this.values = [
+            ['Tony stark', 'Iron man', 'Avengers'],
+            ['Peter', 'Spider man', 'Avengers'],
+            ['parker', 'Bat man', 'Justice league']
+        ]
+
+        this.headers = ['Name', 'Alias', 'Team'];
+    }
+    render(){
+        return(
+            <table>
+                <Thead values={this.headers}/>
+                <Tbody values={this.values}/>
+            </table>
+        )
+    }
 }
 
-export default Incrementer
+export default Table;
